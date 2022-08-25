@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="icon" type="image/png" href="/assets/img/dumbbell.png" />
+   <title>LogWorkouts</title>
+</head>
+
+<body>
+   <div class="container">
+      <nav><a href="">LogWorkouts</a>
+         <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="pages/graphic.html">Graph</a></li>
+         </ul>
+      </nav>
+      <header>
+         <div>
+            <div class="user-div-container">
+               <button type="button" id="edit-userName">✏️</button><br>
+               <img src="/assets/img/user-picture.PNG" alt="user image">
+               <h1 id="welcome-user">Welcome <em id="user-name">user_name</em>.</h1>
+            </div>
+            <hr class="divicionSecciones">
+         </div>
+      </header>
+      <div id="date">
+         <form>
+            <select name="years" id="yearSelector">
+               <option value="2020">2020</option>
+               <option value="2021">2021</option>
+               <option value="2022">2022</option>
+               <option value="2023">2023</option>
+               <option value="2024">2024</option>
+               <option value="2025">2025</option>
+               <option value="2026">2026</option>
+               <option value="2027">2027</option>
+               <option value="2028">2028</option>
+               <option value="2029">2029</option>
+            </select>
+            <br>
+            <div>
+               <input type="radio" id="january" name="month" value="1"><label for="january">January</label><input
+                  type="radio" id="february" name="month" value="2"><label for="february">February</label><input
+                  type="radio" id="march" name="month" value="3"><label for="march">March</label><input type="radio"
+                  id="april" name="month" value="4"><label for="april">April</label><input type="radio" id="may"
+                  name="month" value="5"><label for="may">May</label><input type="radio" id="june" name="month"
+                  value="6"><label for="june">June</label><input type="radio" id="july" name="month" value="7"><label
+                  for="july">July</label><input type="radio" id="august" name="month" value="8"><label
+                  for="august">August</label><input type="radio" id="september" name="month" value="9"><label
+                  for="september">September</label><input type="radio" id="october" name="month" value="10"><label
+                  for="october">October</label><input type="radio" id="november" name="month" value="11"><label
+                  for="november">November</label><input type="radio" id="december" name="month" value="12"><label
+                  for="december">December</label>
+            </div>
+         </form>
+      </div>
+      <div id="listWorkouts">
+
+      </div>
+      <div id="creationWorkouts">
+         <p id="creationWorkouts_p">Looks like you have no workouts plan for this month, would you like to create a new
+            one?</p>
+         <button type="button" id="openWorkoutEdit" name="createNewWorkout" class="fa fa-plus"></button>
+      </div>
+      <footer>
+         <div class="icon-media">
+            <div><a href="" class="fa fa-facebook"></a></div>
+            <div><a href="#" class="fa fa-instagram"></a></div>
+         </div>
+         <div class="copyright">
+            <span> © 2022 JEREMIAS PETLIUK. ALL RIGHTS RESERVED.</span>
+            <span>DESIGN &amp; DEVELOPMENT BY JPTLK.</span>
+         </div>
+      </footer>
+   </div>
+   <div class="modal-container" id="modal_container">
+      <div class="modal">
+         <div id="dataWorkout">
+            <form id="creacionDeWorkout">
+            </form>
+         </div>
+         <div id="modalWorkoutButtons">
+            <button id="newExercise">new</button><br>
+            <button id="confirmEdit">confirm</button>
+            <button id="commitList">commit</button>
+            <button id="closeWorkoutEdit">cancel</button>
+         </div>
+      </div>
+   </div>
+   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

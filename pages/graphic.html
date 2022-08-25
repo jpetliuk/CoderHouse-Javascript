@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="../assets/css/style.css">
+   <link rel="icon" type="image/png" href="/assets/img/dumbbell.png" />
+   <title>LogWorkouts - Graphic</title>
+</head>
+
+<body>
+   <div id="container-graph">
+      <nav><a href="/">LogWorkouts</a>
+         <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/pages/graphic.html">Graph</a></li>
+         </ul>
+      </nav>
+      <div id="date">
+         <form id="selector">
+            <select name="workout" id="workoutList"></select>
+            <select name="years" id="yearSelector">
+               <option value="2020">2020</option>
+               <option value="2021">2021</option>
+               <option value="2022">2022</option>
+               <option value="2023">2023</option>
+               <option value="2024">2024</option>
+               <option value="2025">2025</option>
+               <option value="2026">2026</option>
+               <option value="2027">2027</option>
+               <option value="2028">2028</option>
+               <option value="2029">2029</option>
+            </select>
+            <br>
+            <div>
+               <input type="radio" id="january" name="month" value="1"><label for="january">January</label><input
+                  type="radio" id="february" name="month" value="2"><label for="february">February</label><input
+                  type="radio" id="march" name="month" value="3"><label for="march">March</label><input type="radio"
+                  id="april" name="month" value="4"><label for="april">April</label><input type="radio" id="may"
+                  name="month" value="5"><label for="may">May</label><input type="radio" id="june" name="month"
+                  value="6"><label for="june">June</label><input type="radio" id="july" name="month" value="7"><label
+                  for="july">July</label><input type="radio" id="august" name="month" value="8"><label
+                  for="august">August</label><input type="radio" id="september" name="month" value="9"><label
+                  for="september">September</label><input type="radio" id="october" name="month" value="10"><label
+                  for="october">October</label><input type="radio" id="november" name="month" value="11"><label
+                  for="november">November</label><input type="radio" id="december" name="month" value="12"><label
+                  for="december">December</label>
+            </div>
+         </form>
+      </div>
+      <canvas id="myChart"></canvas>
+      <div id="buttonsGraph">
+         <form id="inputs" onSubmit="return false;">
+            <select name="exercise" id="exerciseInput"></select>
+            <select name="day" id="dayInput"></select><br>
+            <input type="number" name="weightInput" id="weightInput" placeholder="Weight" autocomplete="off">
+         </form>
+         <button type="button" id="submitInputs">Submit</button>
+      </div>
+      <div id="displayDataGraph">
+         <div>
+            <h1>Weight</h1>
+            <hr>
+            <h1>Date</h1>
+         </div>
+      </div>
+      <footer>
+         <div class="icon-media">
+            <div><a href="" class="fa fa-facebook"></a></div>
+            <div><a href="#" class="fa fa-instagram"></a></div>
+         </div>
+         <div class="copyright">
+            <span> © 2022 JEREMIAS PETLIUK. ALL RIGHTS RESERVED.</span>
+            <span>DESIGN &amp; DEVELOPMENT BY JPTLK.</span>
+         </div>
+      </footer>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <script src="../assets/js/graphic.js"></script>
+</body>
+
+</html>

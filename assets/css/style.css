@@ -1,0 +1,665 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins&display=swap');
+/*font-family: 'Oswald', sans-serif;*, font-family: 'Poppins', sans-serif;*/
+
+/* global */
+body {
+   background-image: url(/assets/img/istockphoto-943758636-1024x1024.jpg);
+   box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.4);
+   color: #080708;
+   margin: 0;
+   padding: 0;
+   font-family: 'Oswald', sans-serif;
+}
+
+p {
+   font-family: 'Poppins', sans-serif;
+}
+
+.container {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: auto;
+   grid-template-areas: "nav nav"
+      "header header"
+      "date date"
+      "listWorkouts listWorkouts"
+      "creationWorkouts creationWorkouts"
+      "footer footer";
+}
+
+/* nav */
+nav {
+   background-color: #fefcfb;
+   grid-area: nav;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   box-shadow: 0 0 15px #080708;
+   z-index: 25;
+}
+
+nav a {
+   text-decoration: none;
+   color: #080708;
+   font-size: 1.8rem;
+   margin: auto 0 auto 20px;
+}
+
+nav ul {
+   list-style-type: none;
+   margin: auto 30px auto 0;
+   padding: 0;
+}
+
+nav ul li {
+   display: inline;
+}
+
+nav ul li a {
+   font-size: 1.2rem;
+}
+
+/* header */
+header {
+   grid-area: header;
+   margin: 0;
+   padding-top: 3rem;
+   text-align: center;
+   font-family: 'Poppins', sans-serif;
+   font-size: 0.6rem;
+   background-image: url(/assets/img/web_page_D-1.png);
+   background-size: cover;
+   background-position-y: 83%;
+   background-blend-mode: soft-light;
+}
+
+header div {
+   margin: auto;
+}
+
+.user-div-container {
+   margin: auto;
+   width: 450px;
+   padding-top: 2px;
+   border-radius: 10px;
+   background-color: #fefcfb;
+   box-shadow: 0 0 10px 10px #fefcfb;
+   margin-bottom: 45px;
+}
+
+#welcome-user {
+   padding-bottom: 12px;
+}
+
+header div button {
+   font-size: 0.8rem;
+   text-align: center;
+   text-decoration: none;
+   border-radius: 50%;
+   border: none;
+   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+   transition: .2s cubic-bezier(.4, 0, 0, 1);
+   cursor: pointer;
+   min-width: 35px;
+   min-height: 35px;
+   max-width: 35px;
+   max-height: 35px;
+   margin: auto 0 -20px 410px;
+}
+
+header div button:hover {
+   background-color: #d5d7da;
+   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+.swal2-container {
+   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header img {
+   width: 180px;
+   margin-top: -15px;
+}
+
+.divicionSecciones {
+   grid-area: divicion-secciones;
+   border: solid 1px #080708;
+   width: 80%;
+   background-color: #080708;
+   margin-top: 50px;
+   margin-bottom: 0;
+}
+
+#user-name {
+   font-size: 1.4rem;
+}
+
+/* date */
+#date {
+   margin: 1.5rem 0 1rem 0;
+   grid-area: date;
+   text-align: center;
+}
+
+#date form select {
+   font-family: 'Oswald', sans-serif;
+   font-size: 1.1rem;
+   padding: 4px 60px 4px 10px;
+}
+
+#date form div input {
+   width: 0;
+   margin: 0;
+}
+
+#date form div {
+   width: 89.1vw;
+   margin: auto;
+}
+
+#date form div label {
+   margin-top: 5px;
+   display: inline-block;
+}
+
+#date form div input+label {
+   font-size: 1.1rem;
+   cursor: pointer;
+   transition: 200ms;
+   padding: 8px 18px 4px 18px;
+   border: solid 1px #001011;
+   border-radius: 8px 8px 0 0;
+   color: #404448;
+   background-color: #ffffff;
+}
+
+#date form div input:checked+label {
+   color: #000000;
+   background-color: #daeef0;
+}
+
+/* listWorkouts */
+#listWorkouts {
+   grid-area: listWorkouts;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: auto;
+   margin: 20px auto 40px auto;
+   font-family: 'Poppins', sans-serif;
+   font-size: 0.8rem;
+}
+
+@media screen and (max-width: 925px) {
+   #listWorkouts {
+      grid-template-columns: 1fr;
+      margin: 40px auto;
+   }
+}
+
+#listWorkouts div {
+   display: flex;
+   position: relative;
+}
+
+#listWorkouts .data-block {
+   border: solid 1px #b6b6b6;
+   background-color: #efefef;
+   border-radius: 5px;
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+   margin: 15px 15px;
+   width: 400px;
+   position: relative;
+}
+
+#listWorkouts fieldset legend {
+   font-size: 2rem;
+   font-weight: bold;
+}
+
+#listWorkouts div span {
+   align-items: center;
+   min-width: 48px;
+   max-width: 48px;
+   min-height: 15px;
+   max-height: 15px;
+   margin: 5px 0 5px 0;
+   margin: auto 15px;
+   border: solid 1px #b6b6b6;
+   box-shadow: 0 2px 4px rgba(61, 56, 56, 0.3);
+}
+
+fieldset .edit-button {
+   cursor: pointer;
+   position: absolute;
+   top: -38px;
+   right: 8px;
+   width: 35px;
+   height: 35px;
+   background-color: #2785e4;
+   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+   border: none;
+   transition: .2s cubic-bezier(.4, 0, 0, 1);
+   border-radius: 100%;
+}
+
+fieldset .edit-button:hover {
+   background-color: #539ce4;
+   color: white;
+}
+
+fieldset .delete-button {
+   cursor: pointer;
+   font-size: 10px;
+   width: 25px;
+   height: 25px;
+   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+   border: none;
+   transition: .2s cubic-bezier(.4, 0, 0, 1);
+   border-radius: 100%;
+}
+
+fieldset .delete-button:hover {
+   background-color: #d5d7da;
+   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+fieldset a {
+   margin-left: 5px;
+   text-decoration: none;
+   padding: 5px;
+   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+   transition: .2s cubic-bezier(.4, 0, 0, 1);
+   border-radius: 10px;
+}
+
+fieldset a:hover {
+   background-color: #d5d7da;
+   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+fieldset legend {
+   cursor: text;
+}
+
+fieldset div span {
+   cursor: default;
+}
+
+fieldset div h3 {
+   cursor: text;
+}
+
+/* creationWorkouts */
+#creationWorkouts {
+   grid-area: creationWorkouts;
+   display: flex;
+   margin: 10px auto 100px auto;
+   width: 320px;
+}
+
+#creationWorkouts p {
+   padding: 0;
+   margin: auto;
+   border: none;
+}
+
+#creationWorkouts button {
+   padding: 15px;
+   font-size: 1.2rem;
+   margin: auto 0 auto 5px;
+   text-align: center;
+   text-decoration: none;
+   border-radius: 50%;
+   color: #E8F1F2;
+   background-color: #106cc8;
+   border: none;
+   transition: .3s cubic-bezier(.4, 0, 0, 1);
+   cursor: pointer;
+   min-width: 48px;
+   min-height: 48px;
+}
+
+#creationWorkouts button:hover {
+   background-color: #2785e4;
+   color: white;
+}
+
+/* modal window (edit workout) */
+.modal-container {
+   z-index: 50;
+   display: flex;
+   background-color: rgba(0, 0, 0, 0.3);
+   position: fixed;
+   pointer-events: none;
+   opacity: 0;
+   top: 0;
+   height: 100vh;
+   width: 100vw;
+}
+
+.modal {
+   font-family: 'Poppins', sans-serif;
+   text-align: center;
+   margin: auto 10%;
+   height: 80vh;
+   width: 80vw;
+   background-color: #fefcfb;
+   border-radius: 5px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   overflow-y: scroll;
+}
+
+.modal::-webkit-scrollbar-track {
+   margin: 2px 0 2px 0;
+   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+   border-radius: 10px;
+   background-color: #F5F5F5;
+}
+
+.modal::-webkit-scrollbar {
+   width: 12px;
+   background-color: transparent;
+}
+
+.modal::-webkit-scrollbar-thumb {
+   border-radius: 10px;
+   -webkit-box-shadow: inset 0 0 5px rgba(149, 149, 149, 0.5);
+   background-color: rgb(100, 100, 100);
+}
+
+.modal button {
+   width: 60px;
+   height: 30px;
+}
+
+.modal p {
+   opacity: 0.8;
+}
+
+.show {
+   pointer-events: auto;
+   opacity: 1;
+}
+
+/* modal styles */
+.modal div {
+   margin: 20px auto;
+}
+
+#workout-name {
+   font-family: 'Poppins', sans-serif;
+   font-size: 20px;
+   text-align: center;
+   margin: 0;
+   height: 30px;
+   width: 240px;
+}
+
+.exeColorInput {
+   vertical-align: middle;
+   height: 30px;
+   border: none;
+   cursor: pointer;
+   background-color: transparent;
+   height: 37px;
+   width: 40px;
+}
+
+.exeColorInput::-webkit-color-swatch {
+   border-radius: 13px;
+   border: solid 1px #b6b6b6;
+   box-shadow: 0 2px 4px rgba(61, 56, 56, 0.3);
+}
+
+.exeInput {
+   font-family: 'Poppins', sans-serif;
+   height: 24px;
+   border-radius: 10px;
+   border: solid 1px #b6b6b6;
+}
+
+.deleteButtonInput {
+   cursor: pointer;
+   vertical-align: middle;
+   min-width: 35px;
+   max-width: 35px;
+   min-height: 35px;
+   max-height: 35px;
+   border-radius: 100%;
+   border: none;
+   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+   transition: .2s cubic-bezier(.4, 0, 0, 1);
+   border-radius: 100%;
+}
+
+.deleteButtonInput:hover {
+   background-color: #d5d7da;
+}
+
+.hidden {
+   display: none;
+}
+
+#modalWorkoutButtons button {
+   border: solid 1px #b6b6b6;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+#modalWorkoutButtons button:hover {
+   background-color: #d5d7da;
+   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+#newExercise {
+   margin-bottom: 5px;
+}
+
+/*footer*/
+footer {
+   grid-area: footer;
+   min-height: 30vh;
+   background-color: #080708;
+   border-top: solid 1px #080708;
+   display: grid;
+   grid-template-rows: 90% 10%;
+   grid-template-areas: "icon-media"
+      "copyright";
+}
+
+.icon-media {
+   grid-area: icon-media;
+   display: flex;
+   margin: auto;
+}
+
+.copyright {
+   grid-area: copyright;
+   display: flex;
+   justify-content: space-between;
+   padding: 0 2% 0 2%;
+   font-size: 0.55rem;
+   font-family: sans-serif;
+   color: #E8F1F2;
+}
+
+footer .fa {
+   padding: 20px;
+   font-size: 30px;
+   width: 30px;
+   margin: 8px;
+   text-align: center;
+   text-decoration: none;
+   border-radius: 50%;
+   color: transparent;
+   -webkit-text-stroke: 1px #E8F1F2;
+   border: solid 1px #E8F1F2;
+   transition: .3s cubic-bezier(.4, 0, 0, 1);
+}
+
+.icon-media div {
+   margin: auto 20px;
+   border-radius: 50%;
+   transition: .4s cubic-bezier(.4, 0, 0, 1);
+}
+
+.icon-media div:hover {
+   background-color: #E8F1F2;
+   transform: scale(1.05);
+}
+
+.icon-media div:hover .fa {
+   -webkit-text-stroke: 1px #1E2227;
+   border: solid 1px #1E2227;
+}
+
+.swal2-container {
+   z-index: 100;
+}
+
+/* --------------- graphic -------------- */
+.container-graph {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: auto;
+   grid-template-areas: "nav nav"
+      "date date"
+      "graph graph"
+      "buttonsGraph buttonsGraph"
+      "listDataGraph listDataGraph"
+      "footer footer";
+}
+
+#myChart {
+   background-color: #fefcfb;
+   grid-area: graph;
+   width: 100%;
+   margin: auto 20%;
+}
+
+@media screen and (max-width: 925px) {
+   #myChart {
+      margin: auto 10%;
+   }
+}
+
+@media screen and (max-width: 640px) {
+   #myChart {
+      margin: auto 2%;
+   }
+}
+
+#buttonsGraph {
+   grid-area: buttonsGraph;
+   text-align: center;
+   margin: 60px 0 40px 0;
+}
+
+#buttonsGraph form input {
+   font-family: 'Oswald', sans-serif;
+   font-size: 1.1rem;
+   padding: 8px 0 10px 8px;
+   margin-bottom: 20px;
+   border: solid 2px #080708;
+   border-radius: 5px;
+   height: 28px;
+   width: 240px;
+}
+
+#buttonsGraph form select {
+   font-family: 'Oswald', sans-serif;
+   font-size: 1.1rem;
+   padding: 6px 60px 6px 10px;
+   margin-bottom: 5px;
+   border: solid 2px #080708;
+   border-radius: 5px;
+}
+
+#buttonsGraph form #exerciseInput {
+   width: 240px;
+}
+
+#buttonsGraph form #dayInput {
+   padding-right: 0;
+}
+
+#submitInputs {
+   text-align: center;
+   font-family: 'Oswald', sans-serif;
+   font-size: 1.1rem;
+   margin-bottom: 0;
+   padding: 10px 20px;
+   font-weight: 500;
+   border-radius: 10rem;
+   cursor: pointer;
+   transition: 0.3s;
+   background-color: #ef2d57c3;
+   color: #ffffff;
+   border: none;
+}
+
+/* list dataGraph */
+#displayDataGraph {
+   height: 70vh;
+   width: 70vw;
+   grid-area: listDataGraph;
+   text-align: center;
+   margin: 0 auto 5vh auto;
+   overflow-y: scroll;
+   background-color: #efefef90;
+   border-radius: 20px;
+   font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (max-width: 640px) {
+   #displayDataGraph {
+      width: 90vw;
+   }
+}
+
+#displayDataGraph h1 {
+   font-size: 1.5rem;
+   margin: 15px auto;
+   text-decoration: underline;
+}
+
+#displayDataGraph div {
+   display: grid;
+   grid-template-columns: 65% 0% 25% 0% 10%;
+   border-bottom: dashed 1px #08070890;
+   margin: auto 10px auto 10px;
+}
+
+#displayDataGraph div h1 {
+   font-size: 0.9rem;
+   text-decoration: none;
+}
+
+#displayDataGraph div hr {
+   border: dashed 1px #08070890;
+}
+
+#displayDataGraph div button {
+   cursor: pointer;
+   margin: auto;
+   vertical-align: middle;
+   min-width: 30px;
+   max-width: 30px;
+   min-height: 30px;
+   max-height: 30px;
+   border-radius: 100%;
+   border: none;
+   font-size: 0.7rem;
+   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+   transition: .2s cubic-bezier(.4, 0, 0, 1);
+   border-radius: 100%;
+}
+
+#displayDataGraph div button:hover {
+   background-color: #d5d7da;
+}
+
+#displayDataGraph div .gray-text {
+   color: rgba(77, 77, 77, 0.8);
+}
