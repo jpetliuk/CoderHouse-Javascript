@@ -463,7 +463,7 @@ fieldset div h3 {
 /*footer*/
 footer {
   grid-area: footer;
-  min-height: 30vh;
+  min-height: 200px;
   background-color: #080708;
   border-top: solid 1px #080708;
   display: grid;
